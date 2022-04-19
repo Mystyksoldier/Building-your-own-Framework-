@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<body class="bg-gray-200">
+    <nav class="sticky py-2 max-w-full top-0 z-50 flex p justify-between bg-gray-700">
+
+        <div class="flex ml-24 items-center space-x-3">
+            <a href="../recipe/index" class="invisible sm:visible cursor-pointer font-serif tracking-wider subpixel-antialiased text-lg p-3 text-black transition duration-300 ease-in-out title-font hover:text-gray-300">Recipes</a>
+            <a href="../kitchen/index" class="invisible sm:visible cursor-pointer font-serif tracking-wider subpixel-antialiased text-lg p-3 text-black transition duration-300 ease-in-out title-font hover:text-gray-300">Kitchen</a>
+        </div>
+
+        <div class="flex sm:ml-24 lg:mr-24 items-center space-x-3">
+            <a href="https://www.youtube.com/watch?v=cB4dYfFgaME"><img class="hover:scale-105 mb-2 w-auto h-12 lg:mr-24 sm:mr-2 cursor-pointer" src="https://i.postimg.cc/65vcWjMK/Daco-2573139.png" alt="Logo"></a>
+        </div>
+
+        <div class="flex mr-12 items-center space-x-3">
+            <a href="../kitchen/create" class="invisible sm:visible cursor-pointer font-serif	 tracking-wider subpixel-antialiased text-lg text-black transition duration-300 ease-in-out title-font hover:text-gray-300">Create</a>
+            <a href="../user/login" class="invisible sm:visible cursor-pointer font-serif	 tracking-wider subpixel-antialiased text-lg text-black transition duration-300 ease-in-out title-font hover:text-gray-300">Login</a>
+        </div>
+
+        <!-- Dropdown menu -->
+
+        <div class="lg:hidden sm:block transition duration-300 ease-in-out sm:mt-10 sm:block flex justify-end">
+
+            <button class="text-black transition duration-300 ease-in-out text-sm px-3 py-2 text-center inline-flex items-center font-serif font-black tracking-wider italic subpixel-antialiased text-lg" type="button" data-dropdown-toggle="dropdown">...</button>
+
+            <div class="hidden transition duration-300 ease-in-out bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+                <div class="px-4 py-3">
+                <span class="block text-sm font-serif">menu</span>
+            </div>
+            <ul class="py-1 " aria-labelledby="dropdown">
+            <li>
+                <a href="../recipe/index" class="text-sm font-serif hover:bg-gray-100 text-gray-700 block px-4 py-2">Recipe</a>
+            </li>
+            <li>
+                <a href="../kitchen/index" class="text-sm font-serif hover:bg-gray-100 text-gray-700 block px-4 py-2">Kitchen</a>
+            </li>
+            <li>
+                <a href="../recipe/create" class="text-sm font-serif hover:bg-gray-100 text-gray-700 block px-4 py-2">Create</a>
+            </li>
+            <li>
+                <a href="../user/login" class="text-sm font-serif hover:bg-gray-100 text-gray-700 block px-4 py-2">Login</a>
+            </li>
+            </ul>
+            </div>
+        </div>
+        <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+    </nav>
+    <div class="flex justify-center self-center mt-20 z-10">
+        <div class="p-12 bg-white mx-auto rounded-2xl w-100 ">
+            <div class="mb-4">
+                <h3 class="font-semibold text-2xl text-gray-800">Sign In </h3>
+                <p class="text-gray-500">Please sign in to your admin account.</p>
+            </div>
+            <div class="space-y-5">
+                        <div class="space-y-2">
+
+    <form action="login" method="post">
+        <label class="text-sm font-medium text-gray-700 tracking-wide">Username</label>
+        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\ .[a-z]{2,4}$" class=" w-full text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-500" type="text" name="name" placeholder="Username  ">
+    </div>
+    <div class="space-y-2">
+        <label class="mb-5 text-sm font-medium text-gray-700 tracking-wide">Password</label>
+        <input id="myInput" class="w-full content-center text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-500" type="password" name="password" placeholder="Enter your password">
+    </div>
+    <div class="flex items-center justify-between">
+        <div class="text-sm">
+            <input class="rounded-full mt-2 h-auto w-5" type="checkbox" id="myInput" onclick="myFunction()"></input>
+            <label class="mt-12 w-80 text-base rounded-lg focus:outline-none focus:border-green-500" type="radio" id="myInput">Show Password.</label>
+        </div>
+    </div>
+<div>
+    <button name="submit" class="w-full flex justify-center bg-green-500  hover:bg-green-700 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">Sign in</button>
+</form>
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+    x.type = "text";
+    } else {
+    x.type = "password";
+    }
+}</script>
+</body>
+</html>
