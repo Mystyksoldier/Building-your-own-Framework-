@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 if (!class_exists($controller) ) {
-    error('error', 404, "controller $controller not found");
+    header("Location: ../recipe/index");
 } elseif (!method_exists($controller, $method)) {
     error('error', 404, "method $method not found");
 }
